@@ -59,7 +59,8 @@
             <th>number</th>
             <th>username</th>
             <th>password</th>
-            
+            <th></th>
+            <th></th>
          </tr>
          <c:forEach var = "row" items = "${result.rows}">
             <tr>
@@ -68,18 +69,13 @@
                <td > <c:out value = "${row.number}"/></td>
                <td > <c:out value = "${row.username}"/></td>
                <td > <c:out value = "${row.password}"/></td>
-               
+               <td > <a href="delete?name=<c:out  value = "${row.name}"/>">delete</a> </td>
+                <td > <a href="update.jsp?name=<c:out  value = "${row.name}"/>">update</a> </td>
             </tr>
          </c:forEach>
       </table>
-      <form action="update.jsp">
-    <div id="update">
-               <input type="submit" value="update">
-               </form></div>
-               <div id="delete" >
-               <form action="delete" method="post">
-               <input type="submit" value="delete">
-               </form></div>
+      
+               
       <div id="degign">Designed by Srinivas</div>
 </body>
 </html>

@@ -10,7 +10,7 @@
 </head>
 <body >
 
-<form  action="storeuser" method="post">
+<form name="myform" action="storeuser" method="post" onsubmit=" return validate()">
    <title>HTML Tables</title>
    </head>
 	
@@ -23,7 +23,7 @@
          </tr>
           <tr>
             <td>mobile number</td>
-            <td><input type="text" name="number"> </td>
+            <td><input type="text" name="number"><span id="numonly"></span></td>
          </tr>
           <tr>
             <td>username</td>
@@ -32,6 +32,9 @@
           <tr>
             <td>password</td>
             <td><input type="text" name="password"></td>
+             <tr>
+            <td>re-enter password</td>
+            <td><input type="text" name="password2"><span id="pass"></span></td>
          </tr>
           <tr>
             <td><input type="submit"></td>

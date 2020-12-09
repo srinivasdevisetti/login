@@ -43,7 +43,7 @@ public class update extends HttpServlet {
 		int unumber=Integer.parseInt(request.getParameter("unumber"));
 		String uusername=request.getParameter("uusername");
 		String upassword=request.getParameter("upassword");
-		
+		System.out.println(name);
 		try
 	    {
 			Class.forName("com.mysql.jdbc.Driver");  

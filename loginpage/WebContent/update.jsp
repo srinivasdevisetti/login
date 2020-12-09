@@ -1,6 +1,6 @@
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1" isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,13 +9,16 @@
 </head>
 <body>
 
-  <h1 >update User Account application </h1>
+  <h1 >update User  </h1>
+   <% String name =request.getParameter("name"); 
+  
+  
+  %>
+  
   <form action="update" method="post">
+    <input type="hidden" name="name" value="<%=name%>" />
       <table >
-       <tr>
-            <td>name to be update</td>
-            <td><input type="text" name="name"></td>
-         </tr>
+     
          <tr>
             <td>name</td>
             <td><input type="text" name="uname"></td>
