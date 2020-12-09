@@ -39,7 +39,7 @@ public class storeuser extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	       String name = request.getParameter("name");
-	       int phone = Integer.parseInt(request.getParameter("number"));
+	       long phone = Long.parseLong(request.getParameter("number"));
 	       String username = request.getParameter("username");
 	       String password = request.getParameter("password");
 	       
@@ -55,7 +55,7 @@ public class storeuser extends HttpServlet {
 	      // create the mysql insert preparedstatement
 	      PreparedStatement preparedStmt = conn.prepareStatement(query);
 	      preparedStmt.setString (1, name);
-	      preparedStmt.setInt(2,phone);
+	      preparedStmt.setLong(2,phone);
 	      preparedStmt.setString (3,username );
 	      preparedStmt.setString (4,password );
 	    

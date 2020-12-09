@@ -6,11 +6,15 @@
 <meta charset="ISO-8859-1">
 <title>new account</title>
 <script src="validation.js"></script>
-
+<style type="text/css">
+span{font-size: 9;
+color: red;
+}
+</style>
 </head>
 <body >
 
-<form name="myform" action="storeuser" method="post" onsubmit=" return validate()">
+<form name="myform" action="storeuser" method="post" onsubmit="return validateform()">
    <title>HTML Tables</title>
    </head>
 	
@@ -19,7 +23,7 @@
       <table >
          <tr>
             <td>name</td>
-            <td><input type="text" name="name"></td>
+            <td><input type="text" name="name"><span id="sname"></span></td>
          </tr>
           <tr>
             <td>mobile number</td>
@@ -27,14 +31,14 @@
          </tr>
           <tr>
             <td>username</td>
-            <td><input type="text" name="username"></td>
+            <td><input type="text" name="username"><span id="suname"></span></td>
          </tr>
           <tr>
             <td>password</td>
-            <td><input type="text" name="password"></td>
+            <td><input type="text" name="password"><span id="pass"></span></td>
              <tr>
             <td>re-enter password</td>
-            <td><input type="text" name="password2"><span id="pass"></span></td>
+            <td><input type="text" name="password2"><span id="samepass"></span></span></td>
          </tr>
           <tr>
             <td><input type="submit"></td>

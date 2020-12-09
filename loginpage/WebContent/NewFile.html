@@ -4,14 +4,15 @@
  <link rel="stylesheet" href="style.css">
  <link rel="stylesheet" href="heder.css">
 <meta charset="ISO-8859-1">
+<script src="login.js"></script>
 <title>login page</title>
 </head>
 <body>
 
 <h1>Login Page</h1>
-<form action="post" method="post" style="margin-left: 650px">
-username<input type="text" name="username"><br>
-password<input type="password" name="password"><br>
+<form name="myform" action="post" method="post" style="margin-left: 650px"  onsubmit="return login()">
+username<input type="text" name="username"><span id="suname"></span><br>
+password<input type="password" name="password"><span id="pass"></span><br>
 <input type="submit" value="login">
 </form>
 <form action="create" method="post"  style="margin-left: 650px">

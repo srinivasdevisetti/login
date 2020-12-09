@@ -38,11 +38,11 @@ public class update extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String name=request.getParameter("name");
-		String uname=request.getParameter("uname");
-		int unumber=Integer.parseInt(request.getParameter("unumber"));
-		String uusername=request.getParameter("uusername");
-		String upassword=request.getParameter("upassword");
+		String name=request.getParameter("name1");
+		String uname=request.getParameter("name");
+		long unumber=Long.parseLong(request.getParameter("number"));
+		String uusername=request.getParameter("username");
+		String upassword=request.getParameter("password");
 		System.out.println(name);
 		try
 	    {
@@ -57,7 +57,7 @@ public class update extends HttpServlet {
 	      PreparedStatement preparedStmt = conn.prepareStatement(query);
 	      
 	      preparedStmt.setString (1, uname);
-	      preparedStmt.setInt(2,unumber);
+	      preparedStmt.setLong(2,unumber);
 	      preparedStmt.setString (3,uusername );
 	      preparedStmt.setString (4,upassword );
 	      preparedStmt.setString (5, name);
